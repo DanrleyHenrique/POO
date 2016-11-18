@@ -1,0 +1,25 @@
+using System;
+
+public class HelloWorld
+{
+	public static void Main()
+	{
+		circulo c = new circulo();
+		c.Raio = 4;
+		Console.WriteLine("Valor da área................."+c.calcArea());
+		Console.WriteLine("Valor da circunferência......."+c.calcCirc());
+	}
+}
+
+class circulo{
+	private double raio;
+	public double Raio{
+		set{if(value > 0)raio = value;}
+	}
+	public double calcArea(){
+		return 3.14*(raio*raio);
+	}
+	public double calcCirc(){
+		return 3.14*(raio*2);
+	}
+}
