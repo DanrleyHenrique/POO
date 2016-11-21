@@ -1,0 +1,30 @@
+using System;
+
+public class HelloWorld
+{
+	public static void Main()
+	{
+		Pessoa p = new Pessoa();
+		p.Nome =  "Fulano";
+		Console.WriteLine(p.Nome);
+	}
+}
+
+class Pessoa{
+	private string nome;
+	private DateTime nascimento;
+	private string matricula;
+
+	public string Nome{
+		set{this.nome = value;}
+		get{return nome;}
+	}
+	public DateTime Nascimento{
+	  set{this.nascimento = value;}
+	  get{return nascimento;}
+	}
+	public string Matricula{
+	  set{this.matricula = value;}
+	  get{return matricula;}
+	}
+}
