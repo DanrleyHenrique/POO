@@ -4,9 +4,9 @@ public class HelloWorld
 {
 	public static void Main()
 	{
-		Pessoa p = new Pessoa();
-		p.Nome =  "Fulano";
-		Console.WriteLine(p.Nome);
+	  Aluno a = new Aluno();
+	  a.Nome = "Danrley";
+	  Console.WriteLine(a.Nome);
 	}
 }
 
@@ -27,4 +27,12 @@ class Pessoa{
 	  set{this.matricula = value;}
 	  get{return matricula;}
 	}
+}
+
+class Aluno : Pessoa{
+  public string curso{set; get;}
+  }
+
+class Professor : Pessoa{
+  public string Diretoria{set; get;}
 }
