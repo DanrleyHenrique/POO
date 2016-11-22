@@ -1,0 +1,44 @@
+using System;
+
+public class HelloWorld
+{
+	public static void Main()
+	{
+	  
+	}
+}
+
+class ContaComum{
+  private string numero;
+  private int titular;
+  protected double saldo;
+  
+  public void Depositar(double valor){
+    this.saldo += valor;
+  }
+  public void Sacar(double valor){
+    if(valor < 300)
+      this.saldo -= valor;
+  }
+  public double RetornarSaldo(){
+    return this.saldo;
+  }
+  public override string ToString(){
+    return string.Format ($"{0}-{1}", titular, saldo);
+  }
+}
+
+class ContaEspecial : ContaComum{
+  private double limite;
+  public void Sacar(double Sacar){
+      if(Sacar < 1000)
+        this.saldo-=Sacar;
+  }
+}
+
+class ContaPoupanca : ContaComum{
+  
+    public void Render(double juros){
+    
+  }
+}
