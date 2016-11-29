@@ -13,24 +13,24 @@ class ContaComum{
   private int titular;
   protected double saldo;
   
-  public void Depositar(double valor){
+  public virtual void Depositar(double valor){
     this.saldo += valor;
   }
-  public void Sacar(double valor){
+  public virtual void Sacar(double valor){
     if(valor < 300)
       this.saldo -= valor;
   }
-  public double RetornarSaldo(){
+  public virtual double RetornarSaldo(){
     return this.saldo;
   }
-  public override string ToString(){
+  public virtual string ToString(){
     return string.Format ($"{0}-{1}", titular, saldo);
   }
 }
 
 class ContaEspecial : ContaComum{
   private double limite;
-  public void Sacar(double Sacar){
+  public override void Sacar(double Sacar){
       if(Sacar < 1000)
         this.saldo-=Sacar;
   }
@@ -42,3 +42,4 @@ class ContaPoupanca : ContaComum{
     
   }
 }
+      
